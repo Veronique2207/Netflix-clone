@@ -9,4 +9,10 @@ const app=Vue.createApp
             {title:'cinderella', duration 2,img:'.images/cinderella.jpg,'isfav:false},
            ]
 
+
+           title:'wakanda',
+           duration:2,
       }
+
+
+
