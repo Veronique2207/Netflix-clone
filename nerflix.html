@@ -14,16 +14,69 @@
 
 <header class="showcase">
     <div class="showcas-top">
-        <img src="images/netflixlogo.webp" alt="Netflix">
+     <marquee><img src="images/netflixlogo.webp" alt="Netflix" height="200" width="800"></marquee>
     </div>
     <div class="showcase-content">
         <h1>See whats next</h1>
         <p>Save,watch anywhere,anytime</p>
+        
+
     </div>
 </header>
    
 <body>
     <h1>Movies</h1>
+
+    <div v-show="showMovie">Showing Movies</div>
+    </div>
+
+    <br> 
+    <h2>list of Movies</h2>
+   <div v-if="showMovie">
+    <ul> 
+        <li v-for="movie in filteredMovie": class="{fav: movie.is fav}">
+            <h3> title: Kung fu panda</h3>
+            <p> Duration: 2 hours</p>
+            <img V-bind:scr="kung fu panda.jpg" :alt="kung fu panda" width="150" height="100">
+            <button v-on:click="2">Increase duration</button>
+            <button @click="2">Decrease duration</button>
+        </li>
+    </ul>
+
+
+    <ul> 
+        <li v-for="movie in filteredMovie": class="{fav: movie.is fav}">
+            <h3> title: little mermaid</h3>
+            <p> Duration: 1 hours</p>
+            <img V-bind:scr="little mermaid.jpg" :alt="little mermaid" width="150" height="100">
+            <button v-on:click="1">Increase duration</button>
+            <button @click="1">Decrease duration</button>
+        </li>
+
+        </ul>
+
+        <ul> 
+            <li v-for="movie in filteredMovie": class="{fav: movie.is fav}">
+                <h3> title: Wakanda</h3>
+                <p> Duration: 2 hours</p>
+                <img V-bind:scr="wakanda.jpeg" :alt="wakanda" width="150" height="100">
+                <button v-on:click="2">Increase duration</button>
+                <button @click="2">Decrease duration</button>
+            </li>
+        </ul>
+
+
+    <ul> 
+        <li v-for="movie in filteredMovie": class="{fav: movie.is fav}">
+            <h3> title: cinderella</h3>
+            <p> Duration: 2 hours</p>
+            <img V-bind:scr="cinderella.jpg" :alt="cinderella" width="150" height="100">
+            <button v-on:click="2">Increase duration</button>
+            <button @click="2">Decrease duration</button>
+        </li>
+    </ul>
+
+   </div>
 
     
     <section class="tab-content">
@@ -37,7 +90,8 @@
                         </p>
                     </div>
                     <div class="tab-2-content-bottom">
-                        <img src="images/screen.jpg" alt="display"
+                        <img src="images/screen.jpg" alt="display">
+
                         <p>Watch on your TV</p>
                         <p class="text-dark">
                             Smart TVs. PlayStation,XBOX,Chromescast,Apple TV,Blu-ray players and more.
@@ -49,5 +103,6 @@
         </div>
 
     </section>
+    
     
 </body>
